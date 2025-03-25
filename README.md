@@ -12,7 +12,7 @@ Tecnologias Utilizadas
     Flyway
     Auth0
     JWT
-
+    Swagger
 Funcionalidades
 
     Registro de Vagas: Os usuários podem cadastrar e gerenciar diferentes materiais, fornecendo informações como nome, descrição e um arquivo para ser disponibilizado para download.
@@ -33,9 +33,7 @@ Certifique-se de que as dependências do projeto sejam baixadas e atualizadas.
 
 Execute a aplicação Spring Boot.
 
-Acesse o site através do endereço http://localhost:8080 em seu navegador.
+Acesse o site através do endereço http://localhost:8087/api em seu navegador.
 Autores
 
     @HuananCanova
-    @KellenLucas
-    @VictorCardoso
