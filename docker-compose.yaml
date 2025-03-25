@@ -1,0 +1,41 @@
+version: '3'
+services:
+  jobs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8087:8087"
+    depends_on:
+      - PostgreSQL
+    restart: on-failure
+    networks:
+      - rede
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/jobs
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=senha
+  PostgreSQL:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=senha
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=jobs
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - rede
+    volumes:
+      - pg-data:/docker-entrypoint-initdb.d
+
+networks:
+  rede:
+    driver: bridge
+
+volumes:
+  pg-data:
