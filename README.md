@@ -1,39 +1,28 @@
-Spring boot projeto
-Site usado de base para estudps: https://www.bezkoder.com/spring-boot-jpa-crud-rest-api/
+# JOBS API
 
-Projeto JOBS - Plataforma para busca e oferta de vagas de emprego
+API REST desenvolvida como projeto da disciplina **Programação Orientada a Objetos para Web II** na Universidade Federal de Santa Maria (UFSM). Este projeto implementa um sistema de gerenciamento de vagas de emprego, candidaturas e empresas, utilizando tecnologias modernas e boas práticas de desenvolvimento.
 
-Este projeto foi desenvolvido como parte do curso de Programação Orientada a Objetos da Web II, com o objetivo de criar um sistema de vagas de emprego.
-Tecnologias Utilizadas
+## Sobre o Projeto
+O JOBS API foi criado para aplicar conceitos de programação orientada a objetos e desenvolvimento web em um contexto prático. Ele oferece uma solução robusta para autenticação de usuários, gerenciamento de entidades e documentação interativa, demonstrando habilidades em backend com Java e Spring Boot.
 
-    Java
-    Spring Framework
-    Postgres
-    Flyway
-    Auth0
-    JWT
-    Swagger
-Funcionalidades
+## Funcionalidades
+- **Autenticação**: Login seguro com JWT (JSON Web Token).
+- **Gerenciamento de Empresas**: Cadastro, edição e exclusão de empresas (restrito a usuários com papel `ROLE_EMPRESA`).
+- **Gerenciamento de Vagas**: Criação e consulta de vagas de emprego.
+- **Candidaturas**: Submissão e administração de candidaturas por usuários (`ROLE_USER`).
+- **Documentação**: Interface Swagger para explorar e testar os endpoints.
 
-    Registro de Vagas: Os usuários podem cadastrar e gerenciar diferentes materiais, fornecendo informações como nome, descrição e um arquivo para ser disponibilizado para download.
-    Registro de Empresas: O sistema permite o registro e gerenciamento de aulas, incluindo informações como título, data, curso associado e material cadastrado (permite o download do material).
-    Gerenciamento de Usuários: O sistema permite o cadastro de usuários, incluindo diferentes tipos de permissões e controle de acesso.
+## Tecnologias Utilizadas
+- **Java 17**: Linguagem principal com foco em POO.
+- **Spring Boot 3.1.3**: Framework para construção da API REST.
+- **Spring Security**: Autenticação e autorização com JWT.
+- **JPA/Hibernate**: Persistência de dados com banco relacional.
+- **Springdoc OpenAPI**: Documentação automática com Swagger UI.
+- **Maven**: Gerenciamento de dependências e build.
 
-Configuração do Banco de Dados
+## Como Executar
+Siga os passos abaixo para rodar o projeto localmente:
 
-O projeto utiliza o banco de dados Postgres. Para configurar o banco de dados, apenas rode as migrations feitas com Flyway
-
-Relacionados
-
-Configure as informações de conexão com o banco de dados no arquivo application.properties no diretório src/main/resources do projeto. Executando o Projeto Clone o repositório do projeto em sua máquina local.
-
-Abra o projeto em sua IDE
-
-Certifique-se de que as dependências do projeto sejam baixadas e atualizadas.
-
-Execute a aplicação Spring Boot.
-
-Acesse o site através do endereço http://localhost:8087/api em seu navegador.
-Autores
-
-    @HuananCanova
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seuusuario/jobs-api.git
